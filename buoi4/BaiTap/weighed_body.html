@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    var weighed=prompt("Nhập chiều cao của bạn");
+    var height=prompt("Chiều cao của bạn? đơn vị kg");
+    var bmi;
+    bmi = height/(weighed*weighed);
+    var answer = bmi < 16 ? "Gầy độ I":
+        bmi < 17 ? "Gầy độ II":
+            bmi < 18.5 ? "Gầy độ III":
+                 bmi < 25 ? "Bình thường":
+                    bmi < 30 ? "Thừa cân":
+                        bmi < 35 ? "Béo phì độ I": 
+                            bmi < 40 ? "Béo phì độ II":"Béo phì độ III";
+    alert(answer);
+    
+</script>
