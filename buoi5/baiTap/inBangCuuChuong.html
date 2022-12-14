@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+            text-align: center ;
+        }
+        table {
+            width: 100%;
+            border:2px red solid;
+        }
+        th, tr, td {
+            border: 2px blueviolet solid;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bảng cửu chương</h1>
+</body>
+<script>
+
+    var factorA,factorB,value;
+    document.write("<table><tr>");
+    for (factorA=2;factorA <= 10;factorA ++ ) {    
+        for (factorB=1;factorB <= 10; factorB++) {
+            value = factorA * factorB ;
+            console.log(value);
+            document.write("<td>")
+            document.write(factorA + "*" + factorB + "=" + value + "<Br>");
+            document.write("</td>");
+        }
+        document.write("</tr>");
+    }
+    document.write("</table>");
+</script>
+</html>
