@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Giá hoa quả</h3>
+    <input type="text" id="fruitType" value="">
+    <button onclick="showPrice()">Xem giá</button>
+    <h4 id="show"></h4>
+</body>
+<script>
+        var price;
+        var fruit;
+        function showPrice() {
+        fruit = document.getElementById("fruitType").value;
+        switch (fruit) {
+        case "Ổi":
+            price=20000;
+            document.getElementById("show").innerHTML = "Giá ổi : " + price + "VNĐ/kg"
+            break;
+        case "Dưa Hấu":
+            price=20000;
+            document.getElementById("show").innerHTML = "Giá Dưa Hấu : " + price + "VNĐ/kg"
+            break;
+        case "Táo":
+            price=30000;
+            document.getElementById("show").innerHTML = "Giá Táo : " + price + "VNĐ/kg"
+            break;
+        case "Xoài":
+            price=30000;
+            document.getElementById("show").innerHTML = "Giá Xoài : " + price + "VNĐ/kg"
+            break;
+        case "Cam":
+            price=40000;
+            document.getElementById("show").innerHTML = "Giá Cam : " + price + "VNĐ/kg"
+            break;
+            case "Măng Cụt":
+                price=40000;
+                document.getElementById("show").innerHTML = "Giá Măng Cụt : " + price + "VNĐ/kg"
+                break;
+            default:
+                document.getElementById("show").innerHTML = "Loại quả bạn nhập chưa đúng hoặc chúng tôi chưa có loại quả ấy!!"
+    }
+    }
+   
+</script>
+</html>
