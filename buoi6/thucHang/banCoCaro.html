@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <button onclick="change()">danh</button>
+   <p id="chess"></p>
+</body>
+
+<script>
+var chess=[];
+var row=[];
+var i,j;
+var hang,cot;
+hang=parseInt(prompt("nhap hang"));
+cot=parseInt(prompt("cot"));
+console.log(hang);
+console.log(cot);
+for (i=0;i<cot;i++) {
+    for (j=0;j<5;j++) {
+        row[j]=0;
+    }
+    chess[i]=row;
+}
+ 
+for (i=0;i<hang;i++) {
+    for (j=0;j<5;j++) {
+        document.getElementById("chess").innerHTML += chess[i][j] 
+    }
+    document.getElementById("chess").innerHTML += "</br>"
+}
+
+function change() {
+    i=hang;
+    j=cot;
+    chess[i][j]= x;
+}
+</script>
+</html>
