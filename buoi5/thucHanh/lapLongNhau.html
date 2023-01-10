@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+        table,td,th,td {
+            border : 1px solid red;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // var x,y;
+    // document.write("<table> <tr>");
+    //     for (x=1;x <= 10 ; x = x+1 ) {
+    //         document.write("<td>" + x + "</td>");
+    //     }
+    // document.wirte("</table> </tr>");
+    
+
+   var hang,cot,giaTriHang;
+   hang = 1; cot = 1;
+   document.write("<table> <tr>");
+        for (hang = 1; hang <= 10; hang = hang + 1 ) {
+            for (cot = 1; cot < 11; cot ++) {
+                   giaTriHang = hang*cot;
+                    document.write("<td>" + giaTriHang + "</td>" );
+            }
+            document.write("</tr>")
+}
+   document.write("</table>");
+</script>
+</html>
+    
+                

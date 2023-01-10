@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="numin">
+    <button onclick="numberIsland()">Đảo số</button>
+    <p id="showResult">Số đảo ngược đó là :</p>
+</body>
+<script>
+    
+    function numberIsland() {
+        var numin ,numout,transaction;
+        numout= 0;
+        numin=Number(document.getElementById("numin").value);
+                do {
+                    transaction = (numin % 10);
+                    numout= Number(numout*10 + transaction);
+                    numin = Number(numin - transaction);
+                    numin /= 10;  
+                }
+                while (numin > 0);           
+    document.getElementById("showResult").innerHTML += numout ;
+    }
+</script>
+</html>

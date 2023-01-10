@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="input" placeholder="Enter">
+    <button onclick="chechkPalindrom()" >Kiểm tra</button>
+    <p id="result"></p>
+    <script>
+        let conclusion = true;
+        
+        function chechkPalindrom() {
+            let input = document.getElementById("input").value;
+            let words = input.split("");
+            let j = words.length,
+                left,
+                right,
+                loop = Math.floor(j/2);
+            for (let i = 0; i < loop;i++) {
+                left = words[i];
+                right = words[j-1];
+                if (left !== right) {
+                    conclusion = false;
+                }
+            }
+            console.log(conclusion);
+            result();
+        }
+
+        function result() {
+            if (conclusion == true) {
+                document.getElementById("result").innerHTML = "Đây là từ đối xứng";
+            } else {
+                document.getElementById("result").innerHTML = "Đây không là từ đối xứng";
+            }
+        }
+    </script>
+</body>
+
+</html>

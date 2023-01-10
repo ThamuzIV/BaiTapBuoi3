@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Space-separated array elements</p>
+    <input type="" id="text" oninput = "find_minimun_value(this.value)" placeholder="Enter array">
+    <p id="minimunNumber"></p>
+    <script>
+        var array = [];
+        parseFloat
+        function find_minimun_value(input) {
+            array = input.split(",");
+            let a = array[0];
+            for (let i = 1;i < array.length;i++) {
+                if (parseFloat(array[i]) < a ) {
+                    a = parseFloat(array[i]);
+                }
+            }
+            document.getElementById("minimunNumber").innerHTML = "Minimun number in array is: " + a ;
+        }
+    </script>
+</body>
+</html>

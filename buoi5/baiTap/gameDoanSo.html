@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="start" type="button" onclick="play()"> play </button>
+</body>
+<script>
+    var numhide=Math.floor(Math.random()*10);
+    var numin,turn=0;
+    console.log(numhide);
+    function play() {
+        turn ++;
+        numin=prompt("nhập số bạn đoán");
+        if (numin=="") {
+           alert("bạn chưa nhập số");
+        } else if (numin != numhide){
+             alert("Bạn đã đoán sai");
+        }
+         else {
+            alert("chúc mừng bạn đã đoán đúng số lần bạn đã thử là : " + turn);
+            numhide = Math.floor(Math.random()*10);
+            turn=0;
+            
+         }
+    }
+
+</script>
+</html>
