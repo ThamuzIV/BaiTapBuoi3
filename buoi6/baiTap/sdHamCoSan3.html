@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>    
+    <input type="text" id="textIn" oninput="stringConversion()">
+    <p id="result"></p>
+    <script>
+    var result = [];
+    var up = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    var down = 'abcdefghijklmnopqrstuvwxyz';
+        function stringConversion() {
+            result = [];
+            let stringIn = document.getElementById("textIn").value;
+            let string = stringIn;
+            for (let i =0 ; i < string.length;i++) {
+                if (up.indexOf(string[i]) !== -1) {
+                    result.push(string[i].toLowerCase());
+                } else if(down.indexOf(string[i]) !== -1) {
+                    result.push(string[i].toUpperCase());
+                } else {
+                    result.push(string[i]);
+                }
+            }
+            document.getElementById("result").innerHTML = result;
+
+        }
+    </script>
+</body>
+</html>
